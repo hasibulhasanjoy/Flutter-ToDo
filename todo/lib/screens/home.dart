@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/constants/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,9 +7,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Todo',
-          textAlign: TextAlign.center,
+        backgroundColor: colorLightBlue,
+        title: const Center(
+          child: Text(
+            'Todo',
+          ),
         ),
       ),
       body: const Center(
