@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
                 bottom: 20,
               ),
               child: const Text(
-                'All ToDos',
+                'Tasks',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
