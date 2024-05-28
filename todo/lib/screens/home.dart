@@ -3,9 +3,21 @@ import 'package:todo/constants/colors.dart';
 import 'package:todo/models/todo.dart';
 import 'package:todo/widgets/todo_items.dart';
 
-class Home extends StatelessWidget {
-  Home({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   final todoList = ToDo.todoList();
+  void _handleToDoChange(ToDo todo) {
+    setState(() {
+      todo.isDone = !todo.isDone;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +46,7 @@ class Home extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  for (ToDo todo in todoList) ToDoItem(todo),
+                  for (ToDo todo in todoList) ToDoItem(todo, _handleToDoChange),
                 ],
               ),
             ),
