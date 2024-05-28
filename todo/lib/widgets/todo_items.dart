@@ -25,6 +25,7 @@ class ToDoItem extends StatelessWidget {
           style: TextStyle(
             fontSize: 16,
             color: colorBlack,
+            // decoration: TextDecoration.lineThrough,
           ),
         ),
         trailing: Container(
