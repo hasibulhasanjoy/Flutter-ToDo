@@ -32,22 +32,6 @@ class ToDoItem extends StatelessWidget {
             decoration: todo.isDone ? TextDecoration.lineThrough : null,
           ),
         ),
-        trailing: Container(
-          padding: const EdgeInsets.all(0),
-          margin: const EdgeInsets.symmetric(vertical: 12),
-          height: 35,
-          width: 35,
-          decoration: BoxDecoration(
-            color: colorRed,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: IconButton(
-            color: Colors.white,
-            iconSize: 18,
-            icon: const Icon(Icons.delete),
-            onPressed: () {},
-          ),
-        ),
       ),
     );
   }
