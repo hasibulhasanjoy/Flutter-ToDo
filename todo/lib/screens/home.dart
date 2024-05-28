@@ -25,19 +25,16 @@ class Home extends StatelessWidget {
                 top: 50,
                 bottom: 20,
               ),
-              child: const Column(
+              child: Column(
                 children: [
-                  Text(
+                  const Text(
                     'Tasks',
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  ToDoItem(),
-                  ToDoItem(),
-                  ToDoItem(),
-                  ToDoItem(),
+                  for (ToDo todo in todoList) ToDoItem(todo),
                 ],
               ),
             ),
